@@ -9,6 +9,8 @@ import sharp from "sharp";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
+import { Posts } from "./collections/Posts";
+import { ja } from "payload/i18n/ja";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -20,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Posts],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
@@ -36,4 +38,11 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  i18n: {
+    supportedLanguages: { ja },
+  },
+  localization: {
+    defaultLocale: "ja",
+    locales: ["ja"],
+  },
 });

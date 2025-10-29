@@ -1,6 +1,7 @@
 {
   "npm.packageManager": "pnpm",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -19,7 +20,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll.eslint": "explicit",
+      "source.addMissingImports": "always"
     }
   },
   "[json]": {
@@ -34,7 +36,8 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "[javascript][typescript][typescriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll.eslint": "explicit",
+      "source.addMissingImports": "always"
     }
   }
 }
